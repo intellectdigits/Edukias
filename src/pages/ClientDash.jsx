@@ -26,7 +26,7 @@ useEffect(() => {
 async function fetchCarts(){
 
   axios.defaults.headers.post['Content-Type'] ='application/x-www-form-urlencoded';
-  await axios.get(`http://localhost:3000/carts/${token.user}`).then((response)=>{
+  await axios.get(`https://edukiaapi.onrender.com/carts/${token.user}`).then((response)=>{
  
     setCarts(response.data);
    
@@ -40,7 +40,7 @@ const[courses,setCourses]=useState([]);
 async function fetchCourses(){
 
   axios.defaults.headers.post['Content-Type'] ='application/x-www-form-urlencoded';
-  await axios.get("http://localhost:3000/courses/"+tab).then((response)=>{
+  await axios.get("https://edukiaapi.onrender.com/courses/"+tab).then((response)=>{
     setLoading(false);
     setCourses(response.data);
   
