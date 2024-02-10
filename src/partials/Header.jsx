@@ -10,9 +10,10 @@ const Header = () => {
     const [searchTerm,setSearchTerm]=useState(); 
     const [searchResult,setSearchResult]=useState(); 
     const [catOpen,setCatOpen]=useState(false);
+     const navigate = useNavigate();
     const logout =()=>{
         cookies.remove("TOKEN", { path: "/" }); 
-        window.location.href="/login"
+        navigate("/login")
     }
     async function fetchCourse(){
 
