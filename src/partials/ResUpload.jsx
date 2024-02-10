@@ -33,7 +33,7 @@ setData({...Data,[name]:value})
 async function fetchCourses(){
 
   axios.defaults.headers.post['Content-Type'] ='multipart/form-data';
-  await axios.get("http://localhost:3000/AllCourses").then((response)=>{
+  await axios.get("https://edukiaapi.onrender.com/AllCourses").then((response)=>{
   
     setCourses(response.data);
   
@@ -43,7 +43,7 @@ async function fetchCourses(){
   async function fetchRes(){
 
     axios.defaults.headers.post['Content-Type'] ='multipart/form-data';
-    await axios.get("http://localhost:3000/resources").then((response)=>{
+    await axios.get("https://edukiaapi.onrender.com/resources").then((response)=>{
     
       setRes(response.data);
     
@@ -63,7 +63,7 @@ async function fetchCourses(){
     formData.append('desc', Data.desc)
     formData.append('course', cos)
    
-    await axios.post("http://localhost:3000/addRes",formData,{headers: {'Content-Type': 'multipart/form-data'}}).then((response)=>{
+    await axios.post("https://edukiaapi.onrender.com/addRes",formData,{headers: {'Content-Type': 'multipart/form-data'}}).then((response)=>{
       fetchRes()
     }).catch(error=>alert(error))
   
