@@ -17,7 +17,7 @@ const Header = () => {
     async function fetchCourse(){
 
         axios.defaults.headers.post['Content-Type'] ='application/x-www-form-urlencoded';
-        await axios.get(`http://localhost:3000/search/${searchTerm}`).then((response)=>{
+        await axios.get(`https://edukiaapi.onrender.com/search/${searchTerm}`).then((response)=>{
        
           setSearchResult(response.data);
          setSearchOpen(true)
