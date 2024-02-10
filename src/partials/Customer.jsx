@@ -123,7 +123,7 @@ async function fetchCourses(){
 {courses.map((course)=>{return <tr><td id="title">{course.title}</td><td>{course.category}</td><td>{course.desc}</td><td>{course.price}</td><td>{course.price}</td><td><img width={60} src={"https://edukiaapi.onrender.com//"+course.imgUrl+".jpg"}/></td><td><button onClick={async()=>{
 
    axios.defaults.headers.post['Content-Type'] ='application/x-www-form-urlencoded';
-   await axios.post("https://edukiaapi.onrender.com//DelCourse",{
+   await axios.post("https://edukiaapi.onrender.com/DelCourse",{
  
      id:course._id, // sanitize
    
