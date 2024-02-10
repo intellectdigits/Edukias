@@ -61,7 +61,7 @@ const Cart = () => {
    return <tr><td>{cart.title}</td><td>{cart?.totalPrice}</td><td><button onClick={async()=>{
 
 axios.defaults.headers.post['Content-Type'] ='application/x-www-form-urlencoded';
-await axios.post("http://localhost:3000/DelCart",{
+await axios.post("https://edukiaapi.onrender.com/DelCart",{
 
   id:cart._id, // sanitize
 
@@ -80,13 +80,13 @@ Remove From Cart
 onClick={async()=>{
 
   axios.defaults.headers.post['Content-Type'] ='application/x-www-form-urlencoded';
-  await axios.post("http://localhost:3000/CreateSub",{
+  await axios.post("https://edukiaapi.onrender.com/CreateSub",{
   
     formData, // sanitize
   
   }).then((response)=>{
     fetchCarts();
-    navigate("/learning")
+    navigate("learning")
   }).catch(error=>alert(error))
   
   }}> Buy Now</button>}
