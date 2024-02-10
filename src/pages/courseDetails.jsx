@@ -16,7 +16,7 @@ const[loading,setLoading]=useState(true);
 async function fetchCourses(){
 
   axios.defaults.headers.post['Content-Type'] ='application/x-www-form-urlencoded';
-  await axios.get(`http://localhost:3000/course/${id}`).then((response)=>{
+  await axios.get(`https://edukiaapi.onrender.com/course/${id}`).then((response)=>{
   setLoading(false);
     setCourses(response.data);
 
@@ -28,7 +28,7 @@ async function fetchCourses(){
   async function fetchCarts(){
 
     axios.defaults.headers.post['Content-Type'] ='application/x-www-form-urlencoded';
-    await axios.get(`http://localhost:3000/carts/${token.user}`).then((response)=>{
+    await axios.get(`https://edukiaapi.onrender.com/carts/${token.user}`).then((response)=>{
    
       setCarts(response.data);
      
@@ -55,7 +55,7 @@ async function fetchCourses(){
 const addToCart=async ()=>{
   
   axios.defaults.headers.post['Content-Type'] ='application/x-www-form-urlencoded';
-  await axios.post("http://localhost:3000/addCart",{
+  await axios.post("https://edukiaapi.onrender.com/addCart",{
 
     totalPrice: courses.price, // sanitize
     user: token.user,
