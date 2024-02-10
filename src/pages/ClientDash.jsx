@@ -6,6 +6,7 @@ import AuthHeader from "../partials/AuthHeader";
 import { Carousel } from 'flowbite-react';
 import { Audio,Circles } from 'react-loader-spinner';
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const cookies = new Cookies();
 const ClientDash = () => {
 const[error,setError]=useState({email:"",firstname:"",lastname:"",password:""})
@@ -19,7 +20,7 @@ useEffect(() => {
   
   setTimeout(() => {
    if(!token){
-    window.location.href="/login"
+    useNavigate("/login")
    }
   }, []);
 });
@@ -113,7 +114,7 @@ console.log("courses",courses)
           
                     <div className="sm:flex flex-col w-full overflow-x-hidden  md:grid grid-cols-4 gap-4 justify-center items-center my-5">
                     
-                    { courses.map((course)=>{return <div className="max-w-sm px-10 left-20 min-w-80 rounded overflow-hidden shadow-lg cursor-pointer gap-5" onClick={()=>{location.href=`course/${course._id}`}}>
+                    { courses.map((course)=>{return <div className="max-w-sm px-10 left-20 min-w-80 rounded overflow-hidden shadow-lg cursor-pointer gap-5" onClick={()=>{useNavigate(`course/${course._id}`)}}>
             <img className="w-full" src={"http://localhost:3000/"+course.imgUrl+".jpg"} alt="Sunset in the mountains"/>
             <div className="px-6 py-4">
             
