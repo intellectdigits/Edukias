@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 import {Link} from "react-router-dom";
 import Cookies from "universal-cookie";
-
+import { useNavigate } from "react-router-dom";
 const cookies = new Cookies();
 const AuthHeader = ({cartCount,NotifyCount}) => {
 
     const logout =()=>{
         cookies.remove("TOKEN", { path: "/" }); 
-        window.location.href="/login"
+        useNavigate("/login")
     }
     return (
         <>
