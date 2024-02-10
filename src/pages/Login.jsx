@@ -8,6 +8,7 @@ import { useNavigate } from "react-router-dom";
 const Login = () => {
 const[error,setError]=useState({email:"",password:""})
 const[Data,setData]=useState({email:"",password:""})
+   const navigate = useNavigate();
 const[loading,setLoading]=useState(false);
 const handleEmail=(e)=>{
   const value=e.target.value;
@@ -43,7 +44,7 @@ const  handleSubmit=async (e)=>{
     password: Data.password,
   }).then((response)=>{
     setLoading(false);
-    useNavigate("/client")
+    navigate("/client")
     cookies.set("TOKEN", response.data, {
       path: "/",
     });
