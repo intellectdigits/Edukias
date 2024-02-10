@@ -95,7 +95,7 @@ if(value.trim()==""){
 const  handleSubmit=async (e)=>{
   e.preventDefault();
   axios.defaults.headers.post['Content-Type'] ='application/x-www-form-urlencoded';
-  await axios.post("http://localhost:3000/subscription",{
+  await axios.post("https://edukiaapi.onrender.com/subscription",{
     fullname: Data.fullname,
     category: Data.category,
     course:Data.course,
