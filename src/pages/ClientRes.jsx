@@ -23,7 +23,7 @@ const ClientRes = () => {
     async function fetchRes(){
 
         axios.defaults.headers.post['Content-Type'] ='multipart/form-data';
-        await axios.get("http://localhost:3000/resources/"+course).then((response)=>{
+        await axios.get("https://edukiaapi.onrender.com/resources/"+course).then((response)=>{
        console.log(response.data)
           setRes(response.data);
         
