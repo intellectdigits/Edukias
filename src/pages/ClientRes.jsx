@@ -4,6 +4,7 @@ import Cookies from "universal-cookie";
 import axios from "axios";
 import { useState,useEffect } from "react";
 import { useParams } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 const ClientRes = () => {
     const cookies = new Cookies();
     let { course } = useParams();
@@ -15,7 +16,7 @@ const ClientRes = () => {
      
                  setTimeout(() => {
                   if(!token){
-                   window.location.href="/login"
+                   useNavigate("/login")
                   }
                  },[]);
                });
