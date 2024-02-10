@@ -15,7 +15,7 @@ const Cart = () => {
      
                  setTimeout(() => {
                   if(!token){
-                   useNavigate("/login")
+                   navigate("/login")
                   }
                  },[]);
                });
@@ -86,7 +86,7 @@ onClick={async()=>{
   
   }).then((response)=>{
     fetchCarts();
-    useNavigate("/learning")
+    navigate("/learning")
   }).catch(error=>alert(error))
   
   }}> Buy Now</button>}
