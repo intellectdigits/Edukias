@@ -14,6 +14,7 @@ const[courses,setCourses]=useState([]);
 const[total,setTotal]=useState();
 const[title,setTitle]=useState();
 const[loading,setLoading]=useState(true);
+     const navigate = useNavigate();
 async function fetchCourses(){
 
   axios.defaults.headers.post['Content-Type'] ='application/x-www-form-urlencoded';
@@ -47,7 +48,7 @@ async function fetchCourses(){
    
   setTimeout(() => {
    if(!token){
-    useNavigate("/login")
+    navigate("/login")
 
    }
    
@@ -81,7 +82,7 @@ const addToCart=async ()=>{
   ariaLabel="loading"
 
 />}
-  <img className="w-1/2" src={"http://localhost:3000/"+courses.imgUrl+".jpg"} alt="Sunset in the mountains"/>
+  <img className="w-1/2" src={"https://edukiaapi.onrender.com/"+courses.imgUrl+".jpg"} alt="Sunset in the mountains"/>
   <div className="px-6 py-4">
     <div className="font-bold text-xl mb-2">{courses.title}</div>
     <p className="text-gray-700 text-base">
