@@ -96,7 +96,7 @@ async function fetchCourses(){
 {res.map((resource)=>{return <tr><td id="title">{resource.course}</td><td>{resource.title}</td><td>{resource.desc}</td><td><button onClick={async()=>{
 
    axios.defaults.headers.post['Content-Type'] ='application/x-www-form-urlencoded';
-   await axios.post("http://localhost:3000/DelRes",{
+   await axios.post("https://edukiaapi.onrender.com/DelRes",{
  
      id:resource._id, // sanitize
    
