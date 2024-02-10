@@ -3,9 +3,10 @@ import AuthHeader from '../partials/AuthHeader'
 import Cookies from "universal-cookie";
 import axios from "axios";
 import { useState,useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 const Cart = () => {
     const cookies = new Cookies();
-  
+   const navigate = useNavigate();
     const token = cookies.get("TOKEN");
     const[loading,setLoading]=useState(true)
     const[sum,setSum]=useState(0)
@@ -14,7 +15,7 @@ const Cart = () => {
      
                  setTimeout(() => {
                   if(!token){
-                   window.location.href="/login"
+                   useNavigate("/login")
                   }
                  },[]);
                });
@@ -85,7 +86,7 @@ onClick={async()=>{
   
   }).then((response)=>{
     fetchCarts();
-    window.location.href="/learning"
+    useNavigate("/learning")
   }).catch(error=>alert(error))
   
   }}> Buy Now</button>}
