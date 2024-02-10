@@ -20,7 +20,7 @@ const AuthHeader = ({cartCount,NotifyCount}) => {
 
     <div className="flex gap-3 mx-10">
     <ul className="flex gap-5 text-lg text-dark my-3"><li><Link to="client/cart"><div className="relative h-10 w-10 py-0">
-    <img src="../assets/img/notification.png" className="w-3/2 h-10" alt="" />
+    <img src="assets/img/notification.png" className="w-3/2 h-10" alt="" />
   <div className="absolute top-0 left-0 items-center  w-1/2 text-sm text-bold bg-blue-600 rounded-full  text-white border-collapse "><p className="text-center ...">3</p></div>
 </div> </Link></li>
 <li><Link to="client/cart"><div className="relative h-10 w-10 py-0">
