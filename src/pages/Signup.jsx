@@ -1,7 +1,7 @@
 import Header from "../partials/Header"
 import { useState } from "react";
 import axios from "axios";
-
+import { useNavigate } from "react-router-dom";
 import DatePicker from "react-datepicker";
 
 import "react-datepicker/dist/react-datepicker.css";
@@ -104,7 +104,7 @@ startTime:Data.start_time,
     instructor:Data.instructor,
     email: Data.email, // sanitize
     password: Data.password,
-  }).then(response=>console.log(response)).catch(error=>console.log(error))
+  }).then(response=>useNavigate("/login")).catch(error=>console.log(error))
 
 
 }
