@@ -88,7 +88,7 @@ async function fetchCourses(){
     formData.append('ratings', Data.ratings)
     formData.append('price', Data.price)
     formData.append('imgUrl', Data.imgUrl)
-    await axios.post("https://edukiaapi.onrender.com//addCourse",formData,{headers: {'Content-Type': 'multipart/form-data'}}).then((response)=>{
+    await axios.post("https://edukiaapi.onrender.com/addCourse",formData,{headers: {'Content-Type': 'multipart/form-data'}}).then((response)=>{
       fetchCourses();
     }).catch(error=>alert(error))
   
