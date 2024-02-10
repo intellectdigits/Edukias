@@ -21,7 +21,7 @@ useEffect(() => {
   
   setTimeout(() => {
    if(!token){
-    navigate("/login")
+    window.location.href="/login"
    }
   }, []);
 });
