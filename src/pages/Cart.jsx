@@ -22,7 +22,7 @@ const Cart = () => {
     async function fetchCarts(){
 
         axios.defaults.headers.post['Content-Type'] ='application/x-www-form-urlencoded';
-        await axios.get(`http://localhost:3000/carts/${token.user}`).then((response)=>{
+        await axios.get(`https://edukiaapi.onrender.com/carts/${token.user}`).then((response)=>{
        
           setCarts(response.data);
          
