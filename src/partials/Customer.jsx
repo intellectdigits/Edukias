@@ -66,7 +66,7 @@ setData({...Data,[name]:value})
 async function fetchCourses(){
 
   axios.defaults.headers.post['Content-Type'] ='multipart/form-data';
-  await axios.get("https://edukiaapi.onrender.com//AllCourses").then((response)=>{
+  await axios.get("https://edukiaapi.onrender.com/AllCourses").then((response)=>{
   
     setCourses(response.data);
   
