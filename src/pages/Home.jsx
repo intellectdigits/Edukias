@@ -14,7 +14,7 @@ const Home = () => {
 async function fetchCourses(){
 
   axios.defaults.headers.post['Content-Type'] ='application/x-www-form-urlencoded';
-  await axios.get("http://localhost:3000/courses/"+tab).then((response)=>{
+  await axios.get("https://edukiaapi.onrender.com/courses/"+tab).then((response)=>{
   
     setCourses(response.data);
     setLoading(false);
