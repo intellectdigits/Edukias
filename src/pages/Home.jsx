@@ -5,8 +5,10 @@ import banner from "../assets/img/doctor.png"
 import AuthHeader from "../partials/AuthHeader";
 import { Audio,Circles } from 'react-loader-spinner';
 import {Link} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 const Home = () => {
   const isAuth=true;
+    const navigate = useNavigate();
   const[courses,setCourses]=useState([]);
   const[loading,setLoading]=useState(true);
   const[tabActive,settabActive]=useState(true);
@@ -36,10 +38,10 @@ async function fetchCourses(){
          <div className="sm:w-420 items-center  flex-center flex-col"><p className="md:text-7xl text-3xl  text-white mt-50">Best Online Education Platform</p> <p className="md:text-3xl sm:1xl mt-5 text-white my-3">Be the best in your career and skills,
          we offer the best online courses and live Classes</p>
     <div className="flex">
-    <button onClick={()=>location.href="/signup"} className="bg-yellow-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
+    <button onClick={()=>useNavigate("/signup")} className="bg-yellow-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full">
   Get Started
 </button> 
-<button onClick={()=>location.href="/login"} className="bg-white hover:bg-gray-100 mx-3 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+<button onClick={()=>useNavigate("/login")} className="bg-white hover:bg-gray-100 mx-3 text-gray-800 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
  Login
 </button>
     </div>
