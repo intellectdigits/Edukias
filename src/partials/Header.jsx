@@ -67,7 +67,7 @@ const Header = () => {
  }
      </div>
    
-    <div className="hidden md:flex mx-1 "><p className="text-lg font-normal text-white my-3"><Link to="/">Teach</Link></p> </div>
+    <div className="hidden md:flex mx-1 "><p className="text-lg font-normal text-white my-3"><Link to="/admin">Admin</Link></p> </div>
     <div className="hidden md:flex mx-1 "><p className="text-lg font-normal text-white "><Link to="/"><img src="assets/img/fav.png" width={35} className="text-2xl font-mono text-white my-3" /></Link></p> </div>
     
     <div className="hidden md:flex gap-3 mx-10">
