@@ -5,6 +5,7 @@ import Cookies from "universal-cookie";
 import AuthHeader from "../partials/AuthHeader";
 import {useParams} from "react-router-dom";
 import { Audio,Circles } from 'react-loader-spinner';
+import { useNavigate } from "react-router-dom";
 const cookies = new Cookies();
 const CourseDetails = () => {
     let { id } = useParams();
@@ -46,7 +47,7 @@ async function fetchCourses(){
    
   setTimeout(() => {
    if(!token){
-    window.location.href="/login"
+    useNavigate("/login")
 
    }
    
