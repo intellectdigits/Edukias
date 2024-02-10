@@ -28,12 +28,12 @@ export default function App() {
       <Route path="/login" exact element={<Login/>}/>
       <Route path="/client" exact element={<ClientDash/>}/>
       <Route path="/admin" exact element={<CustomerPage/>}/>
-      <Route path="/course/:id" exact element={<CourseDetails/>}/>
-      <Route path="/cart" exact element={<Cart/>}/>
-      <Route path="/learning" exact element={<Learning/>}/>
+      <Route path="client/course/:id" exact element={<CourseDetails/>}/>
+      <Route path="client/cart" exact element={<Cart/>}/>
+      <Route path="client/learning" exact element={<Learning/>}/>
       <Route path="/res" exact element={<ResoursePage/>}/>
       <Route path="/classes" exact element={<SchedularPage/>}/>
-      <Route path="/myres/:course" exact element={<ClientRes/>}/>
+      <Route path="client/myres/:course" exact element={<ClientRes/>}/>
     </Routes>
     
     </BrowserRouter>
