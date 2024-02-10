@@ -66,7 +66,7 @@ setData({...Data,[name]:value})
 async function fetchCourses(){
 
   axios.defaults.headers.post['Content-Type'] ='multipart/form-data';
-  await axios.get("http://localhost:3000/AllCourses").then((response)=>{
+  await axios.get("https://edukiaapi.onrender.com//AllCourses").then((response)=>{
   
     setCourses(response.data);
   
@@ -88,7 +88,7 @@ async function fetchCourses(){
     formData.append('ratings', Data.ratings)
     formData.append('price', Data.price)
     formData.append('imgUrl', Data.imgUrl)
-    await axios.post("http://localhost:3000/addCourse",formData,{headers: {'Content-Type': 'multipart/form-data'}}).then((response)=>{
+    await axios.post("https://edukiaapi.onrender.com//addCourse",formData,{headers: {'Content-Type': 'multipart/form-data'}}).then((response)=>{
       fetchCourses();
     }).catch(error=>alert(error))
   
@@ -120,10 +120,10 @@ async function fetchCourses(){
   </thead>
  
   <tbody>
-{courses.map((course)=>{return <tr><td id="title">{course.title}</td><td>{course.category}</td><td>{course.desc}</td><td>{course.price}</td><td>{course.price}</td><td><img width={60} src={"http://localhost:3000/"+course.imgUrl+".jpg"}/></td><td><button onClick={async()=>{
+{courses.map((course)=>{return <tr><td id="title">{course.title}</td><td>{course.category}</td><td>{course.desc}</td><td>{course.price}</td><td>{course.price}</td><td><img width={60} src={"https://edukiaapi.onrender.com//"+course.imgUrl+".jpg"}/></td><td><button onClick={async()=>{
 
    axios.defaults.headers.post['Content-Type'] ='application/x-www-form-urlencoded';
-   await axios.post("http://localhost:3000/DelCourse",{
+   await axios.post("https://edukiaapi.onrender.com//DelCourse",{
  
      id:course._id, // sanitize
    
