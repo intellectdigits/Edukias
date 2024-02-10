@@ -37,7 +37,7 @@ const  handleSubmit=async (e)=>{
   e.preventDefault();
   setLoading(true);
   axios.defaults.headers.post['Content-Type'] ='application/x-www-form-urlencoded';
-  await axios.post("http://localhost:3000/login",{
+  await axios.post("https://edukiaapi.onrender.com/login",{
 
     email: Data.email, // sanitize
     password: Data.password,
