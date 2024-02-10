@@ -10,7 +10,7 @@ const Signup = () => {
   const [startDate, setStartDate] = useState(new Date());
 const[error,setError]=useState({email:"",fullname:"",category:"",course:"",instructor:"",start_date:"",start_time:"",price:""})
 const[Data,setData]=useState({email:"",password:"",fullname:"",category:"",course:"",instructor:"",start_date:"",start_time:"",price:""})
-
+ const navigate = useNavigate();
 const handleEmail=(e)=>{
   const value=e.target.value;
 const name =e.target.name;
@@ -104,7 +104,7 @@ startTime:Data.start_time,
     instructor:Data.instructor,
     email: Data.email, // sanitize
     password: Data.password,
-  }).then(response=>useNavigate("/login")).catch(error=>console.log(error))
+  }).then(response=>navigate("/login")).catch(error=>console.log(error))
 
 
 }
