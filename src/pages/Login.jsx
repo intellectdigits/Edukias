@@ -4,7 +4,7 @@ import axios from "axios";
 import Cookies from "universal-cookie";
 import { Audio,Circles } from 'react-loader-spinner';
 const cookies = new Cookies();
-
+import { useNavigate } from "react-router-dom";
 const Login = () => {
 const[error,setError]=useState({email:"",password:""})
 const[Data,setData]=useState({email:"",password:""})
@@ -43,7 +43,7 @@ const  handleSubmit=async (e)=>{
     password: Data.password,
   }).then((response)=>{
     setLoading(false);
-    window.location.href="/client"
+    useNavigate("/client")
     cookies.set("TOKEN", response.data, {
       path: "/",
     });
