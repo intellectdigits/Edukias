@@ -22,7 +22,7 @@ const Learning = () => {
     async function fetchLearning(){
 
         axios.defaults.headers.post['Content-Type'] ='application/x-www-form-urlencoded';
-        await axios.get(`http://localhost:3000/learning/${token.user}`).then((response)=>{
+        await axios.get(`https://edukiaapi.onrender.com/learning/${token.user}`).then((response)=>{
        
           setLearning(response.data);
          
