@@ -66,7 +66,7 @@ Schedule Live Class
 <button onClick={async()=>{
 
 axios.defaults.headers.post['Content-Type'] ='application/x-www-form-urlencoded';
-await axios.post("http://localhost:3000/DelLeraning",{
+await axios.post("https://edukiaapi.onrender.com/DelLeraning",{
 
   id:cart._id, // sanitize
 
