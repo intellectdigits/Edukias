@@ -86,7 +86,7 @@ onClick={async()=>{
   
   }).then((response)=>{
     fetchCarts();
-    navigate("learning")
+    window.location.href="/learning"
   }).catch(error=>alert(error))
   
   }}> Buy Now</button>}
