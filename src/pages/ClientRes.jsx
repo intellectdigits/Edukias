@@ -10,13 +10,13 @@ const ClientRes = () => {
     let { course } = useParams();
     const token = cookies.get("TOKEN");
     const[loading,setLoading]=useState(true)
- 
+ const navigate = useNavigate();
     useEffect(() => {
           
      
                  setTimeout(() => {
                   if(!token){
-                   useNavigate("/login")
+                   navigate("/login")
                   }
                  },[]);
                });
@@ -51,7 +51,7 @@ const ClientRes = () => {
     <p className='font-bold text-2xl'>{cart.title}</p>
     <span className=' text-1xl'>{cart.desc}</span>
    <video   controls >
-   <source src={`http://localhost:3000/res/${cart.resUrl}.mp4`} type="video/mp4"/>
+   <source src={`https://edukiaapi.onrender.com/res/${cart.resUrl}.mp4`} type="video/mp4"/>
    <source src="movie.ogg" type="video/ogg"/>
    Your browser does not support the video tag.
    </video></> )})}
