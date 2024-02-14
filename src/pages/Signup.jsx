@@ -131,17 +131,17 @@ startTime:Data.start_time,
    <div className="mb-5">
    <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Category</label>
 <select name="category" onChange={handleCategory} className="bg-gray-50 border border-green-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-  <option selected>Select Category</option>
-  <option value="US">United States</option>
-  <option value="CA">Canada</option>
-  <option value="FR">France</option>
-  <option value="DE">Germany</option>
+  <option selected>Software Development</option>
+  <option value="US">Business</option>
+  <option value="CA">Accounting</option>
+  <option value="FR">Design</option>
+  <option value="DE">Photography</option>
 </select>
     {error.lastname==="lastmame must not be empty"?<p className="mt-2 text-sm text-green-600 dark:text-green-500"><span className="font-medium">Alright!</span> Username available!</p>:""}
    </div>
    <div className="mb-5">
    <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Course</label>
-<select name="course" onChange={handleCourse} className="bg-gray-50 border border-green-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+<select name="course" onChange={handleCourse} className="bg-gray-50 border border-green-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" hidden>
   <option selected>Select Course</option>
   <option value="US">United States</option>
   <option value="CA">Canada</option>
@@ -152,7 +152,7 @@ startTime:Data.start_time,
    </div>
    <div className="mb-5">
    <label for="countries" onChange={handleInstructor} class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Select Instructor</label>
-<select name="countries" className="bg-gray-50 border border-green-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+<select name="countries" className="bg-gray-50 border border-green-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" hidden>
   <option selected>Choose a country</option>
   <option value="US">United States</option>
   <option value="CA">Canada</option>
@@ -168,7 +168,7 @@ startTime:Data.start_time,
 </div>
 <div className="mb-5">
     <label for="username-success" className="block mb-2 text-lg text-bold font-medium text-dark-700 dark:text-green-500">Time</label>
-    <input type="number" name="start_time" onChange={handleStartTime} value={Data.start_time} className="bg-white-50 border border-green-500 text-green-900 placeholder-green-700 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-green-100 dark:border-green-400" />
+    <input type="number" name="start_time" onChange={handleStartTime} value={Data.start_time} className="bg-white-50 border border-green-500 text-green-900 placeholder-green-700 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-green-100 dark:border-green-400" hidden />
     </div>
     </div>
   <div className="flex  justify-center">
