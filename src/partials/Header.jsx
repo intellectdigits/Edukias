@@ -39,7 +39,7 @@ const Header = () => {
     <div className=" flex justify-between sticky t0p-0 mt-3 shadow-md bg-regal-blue text-white-600"> 
    {!navOpen&& <div className="sm:hidden absolute md:absolute top-0 w-1/2 px-5 justify-between h-screen bg-white">
     <div className="flex flex-row-reverse "><p className="text-lg font-normal text-dark my-3" onClick={()=>setNavOpen(!navOpen)}><div >X</div></p> </div>
-    <div className="flex mx-1 "><p className="text-lg font-normal text-dark my-3"><Link to="/">movies</Link></p> </div>
+    <div className="flex mx-1 "><p className="text-lg font-normal text-dark my-3"><Link to="/admin">admin</Link></p> </div>
     <div className="flex mx-1 "><p className="text-lg font-normal text-dark my-3"><Link to="/">Teachers</Link></p> </div>
     <div className="flex mx-1 "><p className="text-lg font-normal text-dark my-3"><Link to="/">Categories</Link></p> </div>
     <div className="flex mx-1 "><p className="text-lg font-normal text-dark my-3"><Link to="/signup"> Sign Up </Link></p> </div>
