@@ -9,7 +9,7 @@ import "react-datepicker/dist/react-datepicker.css";
 const Signup = () => {
   const [startDate, setStartDate] = useState(new Date());
 const[error,setError]=useState({email:"",fullname:"",category:"",course:"",instructor:"",start_date:"",start_time:"",price:""})
-const[Data,setData]=useState({email:"",password:"",fullname:"",category:"",course:"",instructor:"",start_date:"",start_time:"",price:""})
+const[Data,setData]=useState({email:"",password:"",fullname:"",category:"",course:"",instructor:"",start_date:"",start_time:"1",price:""})
  const navigate = useNavigate();
 const handleEmail=(e)=>{
   const value=e.target.value;
@@ -79,18 +79,7 @@ if(value.trim()==""){
 
 }
 
-const handleStartTime=(e)=>{
-  const value=e.target.value;
-const name =e.target.name;
-setData({...Data,[name]:value})
 
-if(value.trim()==""){
- setError({...error,start_time:"password must not be empty"})
-}else{
-  setError({...error,start_time:""})
-}
-
-}
 
 const  handleSubmit=async (e)=>{
   e.preventDefault();
@@ -166,11 +155,7 @@ startTime:Data.start_time,
     <label for="username-success" className="block py-1 mb-2 text-lg text-bold font-medium text-dark-700 dark:text-green-500">Start Date</label>
     <DatePicker selected={startDate} onChange={(date) => setStartDate(date)} />
 </div>
-<div className="mb-5">
-    <label for="username-success" className="block mb-2 text-lg text-bold font-medium text-dark-700 dark:text-green-500">Time</label>
-    <input type="number" name="start_time" onChange={handleStartTime} value={Data.start_time} className="bg-white-50 border border-green-500 text-green-900 placeholder-green-700 text-sm rounded-lg focus:ring-green-500 focus:border-green-500 block w-full p-2.5 dark:bg-green-100 dark:border-green-400" />
-    </div>
-    </div>
+
   <div className="flex  justify-center">
       <button type="submit"  className="bg-regal-blue w-full hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
        Submit
